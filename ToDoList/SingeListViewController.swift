@@ -11,6 +11,8 @@ import UIKit
 class SingeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    var counter = 0
+    
     @IBOutlet weak var singleList: UITableView!
     
   
@@ -32,9 +34,23 @@ class SingeListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let item = singleList.dequeueReusableCell(withIdentifier: "taskItem") as! TaskTableViewCell
         
+                
         item.title.text = List.allLists[selectedListIndex].tasks[indexPath.row].title
         
         item.descript.text = List.allLists[selectedListIndex].tasks[indexPath.row].descr
+        
+        item.task = List.allLists[selectedListIndex].tasks[indexPath.row]
+        
+        if List.allLists[selectedListIndex].tasks[indexPath.row].done == false {
+            
+             item.doneLabel.isHidden = true
+        }
+       
+        else {
+            
+              item.doneLabel.isHidden = false
+        }
+        
         
         return item
         
@@ -154,6 +170,18 @@ override func viewWillAppear(_ animated: Bool) {
 }
 
 
+    
+    
+
+    
+    
+    
+    
+    @IBOutlet var swiped: UISwipeGestureRecognizer!
+    
+    
+    
+    
 
 override func viewDidLoad() {
     super.viewDidLoad()

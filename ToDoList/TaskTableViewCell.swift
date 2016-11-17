@@ -17,9 +17,30 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var descript: UILabel!
     
     
+    @IBOutlet weak var doneLabel: UILabel!
+    
+    var task: Task!
+    
+    
+    func didSwipe(recognizer: UIGestureRecognizer) {
+        if recognizer.state == UIGestureRecognizerState.ended {
+            doneLabel.isHidden = !doneLabel.isHidden
+        }
+        
+        task.done = !task.done
+        
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
+        let recognizer = UISwipeGestureRecognizer(target: self, action:#selector(didSwipe(recognizer:)))
+        contentView.addGestureRecognizer(recognizer)
+
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

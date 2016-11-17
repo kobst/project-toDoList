@@ -21,7 +21,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         item.listTitle.text = List.allLists[indexPath.row].title
         
-        item.counter.text = "\(List.allLists[indexPath.row].tasks.count)" + "/" + "\(List.allLists[indexPath.row].tasks.count)"
+        
+        
+        var doneTasks = 0
+        for task in List.allLists[indexPath.row].tasks {
+            if task.done { doneTasks += 1}
+        }
+        
+        item.counter.text = "\(doneTasks)" + "/" + "\(List.allLists[indexPath.row].tasks.count)" + "   done"
+        
         
         return item
         
