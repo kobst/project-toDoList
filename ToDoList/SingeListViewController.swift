@@ -80,8 +80,8 @@ class SingeListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBAction func addTask(_ sender: UIButton) {
         
+        taskEditing = false
         selectedTaskIndex = List.allLists[selectedListIndex].tasks.count
-        
         performSegue(withIdentifier: "toAddTask", sender: nil)
         
     }
@@ -98,8 +98,8 @@ class SingeListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toEditTask"  {
+            taskEditing = true
             let taskDetail = segue.destination as! TaskDetailViewController
-            
             taskDetail.task = List.allLists[selectedListIndex].tasks[selectedTaskIndex]
 //            taskDetail.taskTitle.text = List.allLists[selectedListIndex].tasks[selectedTaskIndex].title
 //            

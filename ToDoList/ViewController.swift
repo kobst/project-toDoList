@@ -21,14 +21,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         item.listTitle.text = List.allLists[indexPath.row].title
         
-        
-        
         var doneTasks = 0
         for task in List.allLists[indexPath.row].tasks {
             if task.done { doneTasks += 1}
         }
         
-        item.counter.text = "\(doneTasks)" + "/" + "\(List.allLists[indexPath.row].tasks.count)" + "   done"
+        item.counter.text = "\(doneTasks)" + "/" + "\(List.allLists[indexPath.row].tasks.count)"
         
         
         return item
@@ -48,11 +46,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //    }
         
        
-        
-//        print(List.allLists.count)
-//        print(selectedListIndex)
-//        print(List.allLists.count)
-//        print(List.allLists)
         let titleField = listName.text
         let newList = List(title: titleField!, tasks: [])
         selectedListIndex = newList.listIndex
@@ -60,16 +53,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-//    
-//    @IBAction func goToList(_ sender: UIButton) {
-//        guard let checkIndex = ToDoLists.indexPathForSelectedRow else {return}
-//        
-//        
-//        selectedListIndex = checkIndex.row
-//        
-//        performSegue(withIdentifier: "toListDetail", sender: nil)
-//    }
-//    
     
     
     
@@ -101,6 +84,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewWillAppear(_ animated: Bool) {
         self.ToDoLists.reloadData()
         listName.text = ""
+        addListButton.isEnabled = false
+        
+        // how to disable textfield ?
+        
     }
     
     
@@ -109,6 +96,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         listName.text = ""
         addListButton.isEnabled = false
+
+        
+//        
+//        if let testClass = UserDefaults.standard.array(forKey: "lists") {
+//            
+//            
+//            
+//        }
         
         
         

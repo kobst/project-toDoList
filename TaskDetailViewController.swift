@@ -70,7 +70,6 @@ class TaskDetailViewController: UIViewController {
     func fillLabels() {
         
         listTitle.text = List.allLists[selectedListIndex].title
-        
         taskTitle.text = task?.title
         taskDescription.text = task?.descr
         

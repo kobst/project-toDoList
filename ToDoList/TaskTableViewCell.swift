@@ -40,6 +40,9 @@ class TaskTableViewCell: UITableViewCell {
         let recognizer = UISwipeGestureRecognizer(target: self, action:#selector(didSwipe(recognizer:)))
         contentView.addGestureRecognizer(recognizer)
 
+       
+//        let recognizerTwo = UILongPressGestureRecognizer(target: self, action:#selector(pres))
+        
         
     }
 
