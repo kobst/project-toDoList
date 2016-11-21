@@ -14,6 +14,8 @@ class SingeListViewController: UIViewController, UITableViewDelegate, UITableVie
     var counter = 0
     
     @IBOutlet weak var singleList: UITableView!
+
+    
     
   
     @IBOutlet weak var listName: UILabel!
@@ -92,7 +94,14 @@ class SingeListViewController: UIViewController, UITableViewDelegate, UITableVie
             selectedTaskIndex = ItemIndex.row
             performSegue(withIdentifier: "toEditTask", sender: nil)
         }
+//        UIView.animate(withDuration: 0.5, delay: 0, animations: {
+//            self.popUpView.isHidden = false
+//        }, completion: nil)
+//        
+        
     }
+    
+    
     
     
     

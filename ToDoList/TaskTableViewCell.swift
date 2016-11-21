@@ -32,6 +32,11 @@ class TaskTableViewCell: UITableViewCell {
     }
     
     
+//    func didPress(recognizer: UILongPressGestureRecognizer) {
+//        
+//        
+//    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -41,7 +46,9 @@ class TaskTableViewCell: UITableViewCell {
         contentView.addGestureRecognizer(recognizer)
 
        
-//        let recognizerTwo = UILongPressGestureRecognizer(target: self, action:#selector(pres))
+//        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action:#selector(longPressed(longPressRecognizer:)))
+//        contentView.addGestureRecognizer(longPressRecognizer)
+
         
         
     }

@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item  = tableView.dequeueReusableCell(withIdentifier: "listCell") as! ListViewCell
         
+
+        
         item.listTitle.text = List.allLists[indexPath.row].title
         
         var doneTasks = 0
@@ -97,8 +99,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         listName.text = ""
         addListButton.isEnabled = false
 
-        
+//        if let tempList = UserDefaults.standard.object(forKey: "lists") {
+//            List = tempList
 //        
+//        }
+//
 //        if let testClass = UserDefaults.standard.array(forKey: "lists") {
 //            
 //            
