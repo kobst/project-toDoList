@@ -20,6 +20,7 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet weak var taskDescription: UITextView!
     
     
+    
     var task: Task?
     
     @IBAction func save(_ sender: UIButton) {
@@ -73,11 +74,11 @@ class TaskDetailViewController: UIViewController {
         taskTitle.text = task?.title
         taskDescription.text = task?.descr
         
-//        if taskEditing {
-//            taskTitle.text = List.allLists[selectedListIndex].tasks[selectedTaskIndex].title
-//            taskDescription.text = List.allLists[selectedListIndex].tasks[selectedTaskIndex].descr
-//            
-//        }
+        if taskEditing {
+            taskTitle.text = List.allLists[selectedListIndex].tasks[selectedTaskIndex].title
+            taskDescription.text = List.allLists[selectedListIndex].tasks[selectedTaskIndex].descr
+            
+        }
 
         
     }
@@ -88,8 +89,7 @@ class TaskDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         fillLabels()
-        
-        
+    
     }
     
     

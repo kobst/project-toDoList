@@ -15,10 +15,10 @@ class SingeListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var singleList: UITableView!
 
-    
-    
-  
+
     @IBOutlet weak var listName: UILabel!
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -67,16 +67,15 @@ class SingeListViewController: UIViewController, UITableViewDelegate, UITableVie
 //            ListTitle.text = "please enter name of list"
 //            
 //        }}
-    
-    
-//    @IBAction func editTask(_ sender: UIButton) {
-//        if let ItemIndex = singleList.indexPathForSelectedRow {
-//            selectedTaskIndex = ItemIndex.row
-//            performSegue(withIdentifier: "toEditTask", sender: nil)
-//        }
-//        else {return}
-//    }
 //    
+    
+    @IBAction func editTask(_ sender: UIButton) {
+        if let ItemIndex = singleList.indexPathForSelectedRow {
+            selectedTaskIndex = ItemIndex.row
+            performSegue(withIdentifier: "toEditTask", sender: nil)
+        }
+        else {return}
+    }
     
     
     
