@@ -31,7 +31,10 @@ class TaskDetailViewController: UIViewController {
                 taskDescription.text = "please enter task description"
                 return
         }
-        
+        print("---------------/n/n")
+        print(selectedListIndex)
+        print(selectedTaskIndex)
+        print("--------------/n/n")
         
         if taskTitle.text == "" {
             taskTitle.text = "please enter task name"
@@ -42,13 +45,27 @@ class TaskDetailViewController: UIViewController {
         else {
             
             if taskEditing {
+                
+                print("---------------/n/n")
+                print(selectedListIndex)
+                print(selectedTaskIndex)
+                print("--------------/n/n")
+                
                 List.allLists[selectedListIndex].tasks[selectedTaskIndex].title = title
-                List.allLists[selectedListIndex].tasks[selectedListIndex].descr = descr
+                List.allLists[selectedListIndex].tasks[selectedTaskIndex].descr = descr
+                
+                
+                
+                Model.shared.persistListsToFile()
+                Model.shared.persistListsToDefaults()
                 
             }
             else {
                 let newTask = Task(title: title, descr: descr)
                 List.allLists[selectedListIndex].tasks.append(newTask)
+                
+                Model.shared.persistListsToFile()
+                Model.shared.persistListsToDefaults()
             }
 
             
@@ -59,8 +76,11 @@ class TaskDetailViewController: UIViewController {
 //        print(newTask.title)
 //        print(newTask.descr)
         
-        print(List.allLists[selectedListIndex].tasks.count)
         
+
+//        
+//        print(List.allLists[selectedListIndex].tasks.count)
+//        
     
 
         
@@ -80,6 +100,12 @@ class TaskDetailViewController: UIViewController {
             
         }
 
+        Model.shared.persistListsToFile()
+        Model.shared.persistListsToDefaults()
+        
+        
+        
+        
         
     }
     

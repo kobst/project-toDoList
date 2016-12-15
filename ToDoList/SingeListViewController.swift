@@ -72,7 +72,9 @@ class SingeListViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func editTask(_ sender: UIButton) {
         if let ItemIndex = singleList.indexPathForSelectedRow {
             selectedTaskIndex = ItemIndex.row
+            taskEditing = true
             performSegue(withIdentifier: "toEditTask", sender: nil)
+            
         }
         else {return}
     }

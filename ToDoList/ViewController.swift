@@ -51,6 +51,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let titleField = listName.text
         let newList = List(title: titleField!, tasks: [])
         selectedListIndex = newList.listIndex
+        Model.shared.persistListsToFile()
+        Model.shared.persistListsToDefaults()
+        
         performSegue(withIdentifier: "toListDetail", sender: nil)
         
     }
@@ -64,6 +67,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         {
             List.allLists.remove(at: indexPath.row)
             self.ToDoLists.reloadData()
+            
+            Model.shared.persistListsToFile()
+            Model.shared.persistListsToDefaults()
+            
     
             }
         }
