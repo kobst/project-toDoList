@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate  {
 
@@ -18,8 +20,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item  = tableView.dequeueReusableCell(withIdentifier: "listCell") as! ListViewCell
-        
-
         
         item.listTitle.text = List.allLists[indexPath.row].title
         
@@ -34,6 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return item
         
     }
+ 
+    
     
     
     @IBOutlet weak var listName: UITextField!
@@ -51,8 +53,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let titleField = listName.text
         let newList = List(title: titleField!, tasks: [])
         selectedListIndex = newList.listIndex
-        Model.shared.persistListsToFile()
-        Model.shared.persistListsToDefaults()
+//        Model.shared.persistListsToFile()
+//        Model.shared.persistListsToDefaults()
+        
+        
+//        
+//        Model.shared.createList2(list: newList)
+        
+        Model.shared.createList(title: titleField!, content: [])
         
         performSegue(withIdentifier: "toListDetail", sender: nil)
         
@@ -68,8 +76,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             List.allLists.remove(at: indexPath.row)
             self.ToDoLists.reloadData()
             
-            Model.shared.persistListsToFile()
-            Model.shared.persistListsToDefaults()
+//            Model.shared.persistListsToFile()
+//            Model.shared.persistListsToDefaults()
             
     
             }
@@ -105,18 +113,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         listName.text = ""
         addListButton.isEnabled = false
-
-//        if let tempList = UserDefaults.standard.object(forKey: "lists") {
-//            List = tempList
-//        
-//        }
-//
-//        if let testClass = UserDefaults.standard.array(forKey: "lists") {
-//            
-//            
-//            
-//        }
         
+        
+        Model.shared.listenForNotes() {
+            
+            self.ToDoLists.reloadData()
+        }
+        
+        
+
+
+    
         
         
         // Do any additional setup after loading the view, typically from a nib.

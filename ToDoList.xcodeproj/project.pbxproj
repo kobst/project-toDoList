@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8437BA331E22D34100C78E23 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437BA321E22D34100C78E23 /* LoginViewController.swift */; };
 		84A3F0AA1DDB517000D3F48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3F0A91DDB517000D3F48A /* AppDelegate.swift */; };
 		84A3F0AC1DDB517000D3F48A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3F0AB1DDB517000D3F48A /* ViewController.swift */; };
 		84A3F0AF1DDB517000D3F48A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A3F0AD1DDB517000D3F48A /* Main.storyboard */; };
@@ -16,13 +17,14 @@
 		84A3F0BE1DDB56A800D3F48A /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3F0BD1DDB56A800D3F48A /* ListViewCell.swift */; };
 		84A3F0C01DDB624500D3F48A /* SingeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3F0BF1DDB624500D3F48A /* SingeListViewController.swift */; };
 		84A3F0C21DDB652900D3F48A /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3F0C11DDB652900D3F48A /* TaskTableViewCell.swift */; };
-		84C41A651E084D04007512C2 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C41A641E084D04007512C2 /* GoogleService-Info (1).plist */; };
+		84C41A651E084D04007512C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C41A641E084D04007512C2 /* GoogleService-Info.plist */; };
 		84CB3D211DDB739900F135B3 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB3D201DDB739900F135B3 /* TaskDetailViewController.swift */; };
 		ED0DF714A587BE052C1F2592 /* libPods-ToDoList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5672B32D5F796564D5182685 /* libPods-ToDoList.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5672B32D5F796564D5182685 /* libPods-ToDoList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDoList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8437BA321E22D34100C78E23 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84A3F0A61DDB517000D3F48A /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A3F0A91DDB517000D3F48A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A3F0AB1DDB517000D3F48A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,7 +36,7 @@
 		84A3F0BD1DDB56A800D3F48A /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		84A3F0BF1DDB624500D3F48A /* SingeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingeListViewController.swift; sourceTree = "<group>"; };
 		84A3F0C11DDB652900D3F48A /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
-		84C41A641E084D04007512C2 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		84C41A641E084D04007512C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84CB3D201DDB739900F135B3 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskDetailViewController.swift; path = ../TaskDetailViewController.swift; sourceTree = "<group>"; };
 		99C1EAA486BF0D62B08D5A39 /* Pods-ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoList/Pods-ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 		9A592FE33976BA9E36868DAC /* Pods-ToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoList/Pods-ToDoList.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,13 +89,14 @@
 				84CB3D201DDB739900F135B3 /* TaskDetailViewController.swift */,
 				84A3F0C11DDB652900D3F48A /* TaskTableViewCell.swift */,
 				84A3F0AD1DDB517000D3F48A /* Main.storyboard */,
+				8437BA321E22D34100C78E23 /* LoginViewController.swift */,
 				84A3F0BF1DDB624500D3F48A /* SingeListViewController.swift */,
 				84A3F0BB1DDB52C000D3F48A /* data.todolist.swift */,
 				84A3F0BD1DDB56A800D3F48A /* ListViewCell.swift */,
 				84A3F0B01DDB517000D3F48A /* Assets.xcassets */,
 				84A3F0B21DDB517000D3F48A /* LaunchScreen.storyboard */,
 				84A3F0B51DDB517000D3F48A /* Info.plist */,
-				84C41A641E084D04007512C2 /* GoogleService-Info (1).plist */,
+				84C41A641E084D04007512C2 /* GoogleService-Info.plist */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -171,7 +174,7 @@
 				84A3F0B41DDB517000D3F48A /* LaunchScreen.storyboard in Resources */,
 				84A3F0B11DDB517000D3F48A /* Assets.xcassets in Resources */,
 				84A3F0AF1DDB517000D3F48A /* Main.storyboard in Resources */,
-				84C41A651E084D04007512C2 /* GoogleService-Info (1).plist in Resources */,
+				84C41A651E084D04007512C2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +237,7 @@
 				84A3F0C01DDB624500D3F48A /* SingeListViewController.swift in Sources */,
 				84A3F0BE1DDB56A800D3F48A /* ListViewCell.swift in Sources */,
 				84A3F0C21DDB652900D3F48A /* TaskTableViewCell.swift in Sources */,
+				8437BA331E22D34100C78E23 /* LoginViewController.swift in Sources */,
 				84A3F0AC1DDB517000D3F48A /* ViewController.swift in Sources */,
 				84A3F0BC1DDB52C000D3F48A /* data.todolist.swift in Sources */,
 				84A3F0AA1DDB517000D3F48A /* AppDelegate.swift in Sources */,

@@ -56,16 +56,18 @@ class TaskDetailViewController: UIViewController {
                 
                 
                 
-                Model.shared.persistListsToFile()
-                Model.shared.persistListsToDefaults()
+//                Model.shared.persistListsToFile()
+//                Model.shared.persistListsToDefaults()
                 
             }
             else {
                 let newTask = Task(title: title, descr: descr)
                 List.allLists[selectedListIndex].tasks.append(newTask)
                 
-                Model.shared.persistListsToFile()
-                Model.shared.persistListsToDefaults()
+                
+                
+//                Model.shared.persistListsToFile()
+//                Model.shared.persistListsToDefaults()
             }
 
             
@@ -84,6 +86,11 @@ class TaskDetailViewController: UIViewController {
     
 
         
+        
+        Model.shared.updateList(newTitle: List.allLists[selectedListIndex].title, content: List.allLists[selectedListIndex].tasks, list: List.allLists[selectedListIndex])
+        
+        
+        
     }
     
     
@@ -100,8 +107,8 @@ class TaskDetailViewController: UIViewController {
             
         }
 
-        Model.shared.persistListsToFile()
-        Model.shared.persistListsToDefaults()
+//        Model.shared.persistListsToFile()
+//        Model.shared.persistListsToDefaults()
         
         
         
