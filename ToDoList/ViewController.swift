@@ -74,6 +74,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if editingStyle == .delete
         {
             List.allLists.remove(at: indexPath.row)
+            
+            let reference = List.allLists[indexPath.row]
+        
+            Model.shared.deleteList(list: reference)
+            
             self.ToDoLists.reloadData()
             
 //            Model.shared.persistListsToFile()
